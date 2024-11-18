@@ -1,17 +1,17 @@
 import { tagMappings } from './mappings/tags';
-import { ConversionOptions } from './types';
+import { TranspilerOptions } from './types';
 
-export class HTMLEsTranspiler {  //
+export class HTMLEsTranspiler {
   private mappings: Record<string, string>;
 
-  constructor(options: ConversionOptions = {}) {
+  constructor(options: TranspilerOptions = {}) {
     this.mappings = {
       ...tagMappings,
       ...options.customMappings
     };
   }
 
-  public transpile(source: string): string {  // Changed from to HTML
+  public transpile(source: string): string {
     let result = source;
     
     Object.entries(this.mappings).forEach(([spanish, english]) => {
@@ -31,7 +31,7 @@ export class HTMLEsTranspiler {  //
     return result;
   }
 
-  public reverseTranspile(source: string): string {  // Changed from toSpanish
+  public reverseTranspile(source: string): string {
     let result = source;
     
     Object.entries(this.mappings).forEach(([spanish, english]) => {

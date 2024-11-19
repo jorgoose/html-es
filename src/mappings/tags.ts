@@ -1,7 +1,6 @@
 export const tagMappings: Record<string, string> = {
     // Full English words translated to Spanish (with accent marks)
     'título': 'title',
-    'texto': 'text',    // Add mapping for 'text' tag
     'cuerpo': 'body',
     'cabecera': 'head',          // 'head' is better translated as 'cabecera' in HTML context
     'lienzo': 'canvas',
@@ -26,8 +25,20 @@ export const tagMappings: Record<string, string> = {
     'salida': 'output',
     'resumen': 'summary',
     'estilo': 'style',
+    'guion': 'script',
     'tiempo': 'time',
     'enlace': 'link',
+    'imagen': 'picture',
+    'pequeño': 'small',
+    'menú': 'menu',
+    'seleccionar': 'select',
+    'grupoopciones': 'optgroup',
+    'opción': 'option',
+    'tabla': 'table',
+    'subtítulo': 'caption',
+    'columna': 'col',
+    'grupocolumnas': 'colgroup',
+    'entrada': 'input',
     'áreatexto': 'textarea',
     'cita': 'cite',
     'código': 'code',
@@ -37,14 +48,14 @@ export const tagMappings: Record<string, string> = {
     'plantilla': 'template',
     'leyenda': 'legend',
     'fuente': 'source',
-    'seleccionar': 'select',
-    'grupoopciones': 'optgroup',
-    'opción': 'option',
-    'tabla': 'table',
-    'subtítulo': 'caption',
-    'columna': 'col',
-    'grupocolumnas': 'colgroup',
-    'entrada': 'input',        // Add mapping for form input
+
+    // Heading tags mapped to t1 - t6
+    't1': 'h1',
+    't2': 'h2',
+    't3': 'h3',
+    't4': 'h4',
+    't5': 'h5',
+    't6': 'h6',
 
     // Abbreviations adapted to Spanish (for tags that are abbreviations in English)
     'el': 'li',      // 'elemento de lista' -> 'li' (list item)
@@ -55,11 +66,8 @@ export const tagMappings: Record<string, string> = {
     'ft': 'tr',      // 'fila de tabla' -> 'tr' (table row)
 };
 
-// Tags that remain the same (no mapping needed)
-// These tags are the same in both English and Spanish and can be used directly:
-// 'a', 'img', 'div', 'span', 'p', 'br', 'hr', 'b', 'i', 'u', 's', 'del', 'ins', 'kbd', 'var',
-// 'pre', 'samp', 'meta', 'script', 'noscript', 'style', 'iframe', 'embed', 'video', 'audio',
-// 'source', 'track', 'canvas', 'svg', 'math', 'blockquote', 'q', 'abbr', 'area', 'base', 'bdi',
-// 'bdo', 'button', 'data', 'datalist', 'dd', 'dfn', 'dl', 'dt', 'fieldset', 'form', 'h1', 'h2',
-// 'h3', 'h4', 'h5', 'h6', 'label', 'menu', 'picture', 'small', 'table', 'tbody', 'tfoot', 'thead',
-// 'wbr', 'nav'  // Moved 'nav' here as per your instruction
+// Tags that remain unchanged in Spanish (common HTML tags):
+// a, img, div, span, p, br, hr, b, i, u, s, del, ins, kbd, var, pre, samp,
+// meta, noscript, iframe, embed, video, audio, track, canvas, svg, math,
+// blockquote, q, abbr, area, base, bdi, bdo, data, datalist, dd, dfn, dl,
+// dt, fieldset, nav, wbr, tbody, tfoot, thead

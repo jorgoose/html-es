@@ -1,6 +1,7 @@
 export const tagMappings: Record<string, string> = {
     // Full English words translated to Spanish (with accent marks)
     'título': 'title',
+    'texto': 'text',    // Add mapping for 'text' tag
     'cuerpo': 'body',
     'cabecera': 'head',          // 'head' is better translated as 'cabecera' in HTML context
     'lienzo': 'canvas',
@@ -27,7 +28,7 @@ export const tagMappings: Record<string, string> = {
     'estilo': 'style',
     'tiempo': 'time',
     'enlace': 'link',
-    'área-texto': 'textarea',
+    'áreatexto': 'textarea',
     'cita': 'cite',
     'código': 'code',
     'datos': 'data',
@@ -43,6 +44,7 @@ export const tagMappings: Record<string, string> = {
     'subtítulo': 'caption',
     'columna': 'col',
     'grupocolumnas': 'colgroup',
+    'entrada': 'input',        // Add mapping for form input
 
     // Abbreviations adapted to Spanish (for tags that are abbreviations in English)
     'el': 'li',      // 'elemento de lista' -> 'li' (list item)
@@ -51,43 +53,6 @@ export const tagMappings: Record<string, string> = {
     'ct': 'td',      // 'celda de tabla' -> 'td' (table data)
     'et': 'th',      // 'encabezado de tabla' -> 'th' (table header)
     'ft': 'tr',      // 'fila de tabla' -> 'tr' (table row)
-};
-
-// Documentation for abbreviations
-export const abbreviationMeanings = {
-    // List-related tags
-    'el': {
-        spanish: 'elemento de lista',
-        english: 'list item',
-        explanation: 'Abbreviation of "elemento de lista" - represents a single item in a list',
-    },
-    'lo': {
-        spanish: 'lista ordenada',
-        english: 'ordered list',
-        explanation: 'Abbreviation of "lista ordenada" - represents a numbered list',
-    },
-    'ld': {
-        spanish: 'lista desordenada',
-        english: 'unordered list',
-        explanation: 'Abbreviation of "lista desordenada" - represents a bullet point list',
-    },
-
-    // Table-related tags
-    'ct': {
-        spanish: 'celda de tabla',
-        english: 'table data',
-        explanation: 'Abbreviation of "celda de tabla" - represents a data cell in a table',
-    },
-    'et': {
-        spanish: 'encabezado de tabla',
-        english: 'table header',
-        explanation: 'Abbreviation of "encabezado de tabla" - represents a header cell in a table',
-    },
-    'ft': {
-        spanish: 'fila de tabla',
-        english: 'table row',
-        explanation: 'Abbreviation of "fila de tabla" - represents a row in a table',
-    },
 };
 
 // Tags that remain the same (no mapping needed)

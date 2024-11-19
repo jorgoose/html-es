@@ -96,16 +96,30 @@ export class HTMLEsValidator {
     }
 
     private isUnchangedAttribute(attr: string): boolean {
-        return attr === 'id' || 
-               attr === 'class' ||
-               attr.startsWith('data-') || 
+        const unchangedAttributes = new Set([
+            // Standard global attributes
+            'id', 'class', 'style', 'title', 'lang', 'dir',
+            'data-', 'aria-',
+
+            // Commonly used attributes
+            'src', 'href', 'alt', 'value', 'name', 'placeholder',
+            'type', 'method', 'action', 'target', 'rel', 'coords',
+            'shape', 'width', 'height', 'charset', 'async', 'defer',
+
+            // Any attribute starting with 'data-' or 'aria-' should be treated as valid
+        ]);
+
+        // Check if the attribute is exactly in the set or starts with 'data-'/'aria-'
+        return unchangedAttributes.has(attr) ||
+               attr.startsWith('data-') ||
                attr.startsWith('aria-');
     }
 
     private isValidSpanishAttribute(attr: string): boolean {
-        return attr in attributeMappings || 
+        return attr in attributeMappings ||
                this.isUnchangedAttribute(attr) ||
-               ['method', 'action', 'charset', 'href'].includes(attr);
+               // Include other attributes that should be accepted as-is
+               ['method', 'action', 'charset', 'href', 'alt', 'title', 'value', 'name', 'placeholder', 'type', 'src', 'width', 'height', 'coords', 'shape', 'rel', 'dir'].includes(attr);
     }
 
     private validateBasicStructure(source: string, errors: ValidationError[]): void {

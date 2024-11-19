@@ -45,24 +45,24 @@ export class HTMLEsTranspiler {
         // Process tags
         sortedTags.forEach(([spanish, english]) => {
             result = result.replace(
-          new RegExp(`<${spanish}([^>]*?)/>`, 'gi'),
-          `<${english}$1/>`
+                new RegExp(`<${spanish}([^>]*?)/>`, 'gi'),
+                `<${english}$1/>`
             );
             result = result.replace(
-          new RegExp(`<${spanish}(?=[^a-zñáéíóúü]|>)([^>]*?)>`, 'gi'),
-          `<${english}$1>`
+                new RegExp(`<${spanish}(?=[^a-zñáéíóúü]|>)([^>]*?)>`, 'gi'),
+                `<${english}$1>`
             );
             result = result.replace(
-          new RegExp(`</${spanish}(?=[^a-zñáéíóúü]|>)>`, 'gi'),
-          `</${english}>`
+                new RegExp(`</${spanish}(?=[^a-zñáéíóúü]|>)>`, 'gi'),
+                `</${english}>`
             );
         });
 
         // Process attributes
         sortedAttrs.forEach(([spanish, english]) => {
             result = result.replace(
-          new RegExp(`(?<=\\s)${spanish}(?=(\\s|=|>|"))`, 'gi'),
-          english
+                new RegExp(`(?<=\\s)${spanish}(?=(\\s|=|>|"))`, 'g'),
+                english
             );
         });
 

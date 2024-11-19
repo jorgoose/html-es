@@ -67,7 +67,7 @@ describe('HTMLEsValidator', () => {
             const cases = [
                 '<div clase="test"></div>',
                 '<botón deshabilitado></botón>',
-                '<img od="test.jpg" ta="desc">'
+                '<img fte="test.jpg" ta="desc">'
             ];
             cases.forEach(input => {
                 const errors = validator.validateSource(input);

@@ -1,5 +1,5 @@
 export const attributeMappings: Record<string, string> = {
-    // Full English word attributes that need Spanish translation
+    // Full Spanish word attributes that need to be translated to English
     'título': 'title',
     'estilo': 'style',
     'oculto': 'hidden',
@@ -26,23 +26,66 @@ export const attributeMappings: Record<string, string> = {
     'lista': 'list',
     'paso': 'step',
     'acepta': 'accept',
+    'acepta-charset': 'accept-charset',
+    'teclaacceso': 'accesskey',
     'autofoco': 'autofocus',
-    'completado': 'autocomplete',
-    'modo': 'mode',
+    'autoreproducir': 'autoplay',
+    'enctype': 'enctype',
+    'novalidar': 'novalidate',
+    'encabezados': 'headers',
+    'altura': 'height',
+    'longitudmáxima': 'maxlength',
+    'medios': 'media',
+    'muted': 'muted',
+    'baja': 'low',
+    'optimo': 'optimum',
     'lugar': 'placeholder',
-    'solo-lectura': 'readonly',
-    'cargando': 'loading',
+    'saltolinea': 'wrap',
+    'srcdoc': 'srcdoc',
+    'srclang': 'srclang',
+    'traduce': 'translate',
+    'escopo': 'scope',
+    'tiposrc': 'srcset',
+    'usemapa': 'usemap',
+    'anchura': 'width',
+    'envoltura': 'wrap',
+
+    // Form attributes
     'método': 'method',
     'acción': 'action',
-    'texto': 'text',
+    'destino': 'target',
+    'enlace': 'href',
+    'relación': 'rel',
+    'idioma': 'lang',
+    'tipocontenido': 'content',
+    'charset': 'charset',
+    'cruzado': 'crossorigin',
+    'integridad': 'integrity',
+    'asyncrono': 'async',
     
     // Abbreviations for Spanish versions
-    'od': 'src',              // origen digital -> od (source -> src)
+    'fte': 'src',              // fuente de linea -> fte (source -> src)
     'rd': 'rel',              // relación digital -> rd (relation -> rel)
     'ta': 'alt',              // texto alternativo -> ta (alternative text -> alt)
     'ec': 'colspan',          // expansión columna -> ec (column span -> colspan)
     'ef': 'rowspan',          // expansión fila -> ef (row span -> rowspan)
-    'idio': 'lang',             // idioma -> id (language -> lang)
+    'idio': 'lang',           // idioma -> lang
+    // Add other abbreviations if necessary
+};
+
+export const attributeValueMappings: Record<string, string> = {
+    'texto': 'text',
+    'enviar': 'submit',
+    'archivo': 'file',
+    'verdadero': 'true',
+    'falso': 'false',
+    'sí': 'yes',
+    'no': 'no',
+    'izquierda': 'left',
+    'derecha': 'right',
+    'centro': 'center',
+    'justificado': 'justify',
+    // Add other necessary mappings here
 };
 
 // Attributes that remain unchanged (no mapping needed)
@@ -66,3 +109,5 @@ export const attributeMappings: Record<string, string> = {
 // - 'async'       - Script loading behavior
 // - 'defer'       - Script execution timing
 // - All event handlers (onclick, onchange, onsubmit, onload, onfocus, onblur, etc.)
+
+// Event attributes are not included as per your request

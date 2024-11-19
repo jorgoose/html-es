@@ -28,7 +28,7 @@ export const tagMappings: Record<string, string> = {
     'guion': 'script',
     'tiempo': 'time',
     'enlace': 'link',
-    'imagen': 'picture',
+    'imagen': 'picture',        // img maps to img equivalent in Spanish -- imagen is a more general term and maps to picture
     'pequeño': 'small',
     'menú': 'menu',
     'seleccionar': 'select',
@@ -68,6 +68,6 @@ export const tagMappings: Record<string, string> = {
 
 // Tags that remain unchanged in Spanish (common HTML tags):
 // a, img, div, span, p, br, hr, b, i, u, s, del, ins, kbd, var, pre, samp,
-// meta, noscript, iframe, embed, video, audio, track, canvas, svg, math,
+// meta, noscript, iframe, embed, video, audio, track, svg, math,
 // blockquote, q, abbr, area, base, bdi, bdo, data, datalist, dd, dfn, dl,
 // dt, fieldset, nav, wbr, tbody, tfoot, thead

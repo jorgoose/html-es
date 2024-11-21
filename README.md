@@ -1,6 +1,8 @@
-# EsHTML
+# EsHTML (Work in Progress)
 
 A transpiler that converts Spanish-based HTML (EsHTML) to standard HTML - designed for Spanish-speaking developers learning web development.
+
+> ⚠️ **Note**: This project is currently under active development. Features and documentation may change.
 
 ## Description
 
@@ -9,7 +11,7 @@ EsHTML is an educational tool that allows writing HTML using Spanish keywords an
 ## Installation
 
 ```bash
-npm install html-es
+npm install html-es # Note: Package not yet published
 ```
 
 ## Basic Usage
@@ -47,12 +49,12 @@ const html = transpiler.transpile(eshtml);
 
 ## Features
 
+> 🚧 **Development Status**: The following features are planned or in development
+
 - Write HTML using Spanish keywords and attributes (EsHTML syntax)
-- Automatic conversion to standard HTML
 - Built-in validation of EsHTML syntax
 - Support for all standard HTML elements
 - Development mode with strict validation
-- Preserves standard HTML attributes (id, class, data-*, aria-*)
 
 ## Examples
 

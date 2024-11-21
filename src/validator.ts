@@ -17,7 +17,7 @@ export class HTMLEsValidator {
         'área', 'base', 'salto', 'columna', 'incrustar', 
         'hr', 'imagen', 'entrada', 'enlace', 'meta',
         'parámetro', 'fuente', 'pista', 'wbr', 'comando',
-        'genclave', 'elementomenú', "img", 
+        'genclave', 'elementomenú', 'img', 'br', 'entrada',
     ]);
 
     validateSource(source: string): ValidationError[] {

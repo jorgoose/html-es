@@ -64,8 +64,12 @@ export const tagMappings: Record<string, string> = {
     'ct': 'td',      // 'celda de tabla' -> 'td' (table data)
     'et': 'th',      // 'encabezado de tabla' -> 'th' (table header)
     'ft': 'tr',      // 'fila de tabla' -> 'tr' (table row)
+    'cuerpot': 'tbody',  // 'cuerpo de tabla' -> 'tbody'
+    'piet': 'tfoot',     // 'pie de tabla' -> 'tfoot'
+    'encabezadot': 'thead', // 'cabecera de tabla' -> 'thead'
 
     // Tags that remain unchanged in Spanish (common HTML tags):
+    'html': 'html',
     'a': 'a',
     'img': 'img',
     'div': 'div',

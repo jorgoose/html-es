@@ -64,9 +64,9 @@ describe("HTMLEsTranspiler", () => {
     test("translates full word attributes", () => {
       const cases = [
         ['<div clase="test"></div>', '<div class="test"></div>'],
-        ['<entrada tipo="text"></entrada>', '<input type="text"></input>'],
+        ['<entrada tipo="text">', '<input type="text">'],
         ["<botón deshabilitado></botón>", "<button disabled></button>"],
-        ["<entrada requerido></entrada>", "<input required></input>"],
+        ["<entrada requerido>", "<input required>"],
         ["<seleccionar múltiple></seleccionar>", "<select multiple></select>"],
         ['<imagen fte="image.png"/>', '<picture src="image.png"/>'],
       ];
@@ -97,9 +97,9 @@ describe("HTMLEsTranspiler", () => {
   describe("Complex Examples", () => {
     test("handles nested forms", () => {
       const input =
-        '<formulario método="post"><entrada tipo="text" requerido></entrada><botón>Enviar</botón></formulario>';
+        '<formulario método="post"><entrada tipo="text" requerido><botón>Enviar</botón></formulario>';
       const expected =
-        '<form method="post"><input type="text" required></input><button>Enviar</button></form>';
+        '<form method="post"><input type="text" required><button>Enviar</button></form>';
       expect(transpiler.transpile(input)).toBe(expected);
     });
 

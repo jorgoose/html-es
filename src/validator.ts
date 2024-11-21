@@ -12,7 +12,7 @@ export class ValidationError extends Error {
     }
 }
 
-export class HTMLEsValidator {
+export class EsHTMLValidator {
     private voidElements = new Set([
         'área', 'base', 'salto', 'columna', 'incrustar', 
         'hr', 'imagen', 'entrada', 'enlace', 'meta',

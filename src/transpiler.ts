@@ -1,4 +1,4 @@
-import { HTMLEsValidator } from './validator';
+import { EsHTMLValidator } from './validator';
 import { tagMappings } from './mappings/tags';
 import { attributeMappings } from './mappings/attributes';
 
@@ -7,11 +7,11 @@ export interface TranspileOptions {
     ignoreWarnings?: boolean;  // If true, only throw on critical errors
 }
 
-export class HTMLEsTranspiler {
-    private validator: HTMLEsValidator;
+export class EsHTMLTranspiler {
+    private validator: EsHTMLValidator;
 
     constructor() {
-        this.validator = new HTMLEsValidator();
+        this.validator = new EsHTMLValidator();
     }
 
     transpile(source: string, options: TranspileOptions = {}): string {

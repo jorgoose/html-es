@@ -1,10 +1,10 @@
-import { HTMLEsTranspiler } from "../src/transpiler";
+import { EsHTMLTranspiler } from "../src/transpiler";
 
-describe("HTMLEsTranspiler", () => {
-  let transpiler: HTMLEsTranspiler;
+describe("EsHTMLTranspiler", () => {
+  let transpiler: EsHTMLTranspiler;
 
   beforeEach(() => {
-    transpiler = new HTMLEsTranspiler();
+    transpiler = new EsHTMLTranspiler();
   });
 
   describe("Tag Translations", () => {

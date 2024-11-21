@@ -1,11 +1,11 @@
 // src/__tests__/validator.test.ts
-import { HTMLEsValidator, ValidationError } from '../src/validator';
+import { EsHTMLValidator, ValidationError } from '../src/validator';
 
-describe('HTMLEsValidator', () => {
-    let validator: HTMLEsValidator;
+describe('EsHTMLValidator', () => {
+    let validator: EsHTMLValidator;
 
     beforeEach(() => {
-        validator = new HTMLEsValidator();
+        validator = new EsHTMLValidator();
     });
 
     describe('Basic Structure Validation', () => {

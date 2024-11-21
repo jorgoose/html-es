@@ -17,9 +17,9 @@ npm install html-es # Note: Package not yet published
 ## Basic Usage
 
 ```javascript
-import { HTMLEsTranspiler } from 'html-es';
+import { EsHTMLTranspiler } from 'html-es';
 
-const transpiler = new HTMLEsTranspiler();
+const transpiler = new EsHTMLTranspiler();
 
 // Write HTML using Spanish keywords (EsHTML)
 const eshtml = `
@@ -85,9 +85,9 @@ const html = transpiler.transpile(eshtml);
 
 ## API
 
-### HTMLEsTranspiler
+### EsHTMLTranspiler
 ```javascript
-const transpiler = new HTMLEsTranspiler();
+const transpiler = new EsHTMLTranspiler();
 transpiler.transpile(source: string, options?: TranspileOptions): string;
 ```
 

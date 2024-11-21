@@ -1,5 +1,5 @@
 {
-  "name": "es-html",
+  "name": "html-es",
   "version": "0.1.0",
   "description": "Write HTML using pure Spanish - A transpiler for EsHTML for Spanish-speaking learners",
   "main": "dist/index.js",
@@ -25,7 +25,7 @@
     "transpiler",
     "español",
     "programming",
-    "es-html"
+    "EsHTML"
   ],
   "author": "Logan Jorgensen",
   "license": "MIT",

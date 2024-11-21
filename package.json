@@ -1,7 +1,7 @@
 {
-  "name": "html-es",
+  "name": "es-html",
   "version": "0.1.0",
-  "description": "Write HTML using Spanish tags - A transpiler for Spanish HTML",
+  "description": "Write HTML using pure Spanish - A transpiler for EsHTML for Spanish-speaking learners",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "jest",
+    "test": "node ./node_modules/jest/bin/jest.js",
     "lint": "eslint src --ext .ts",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
@@ -25,9 +25,9 @@
     "transpiler",
     "español",
     "programming",
-    "html-es"
+    "es-html"
   ],
-  "author": "Your Name",
+  "author": "Logan Jorgensen",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.0",
@@ -35,17 +35,20 @@
     "@typescript-eslint/eslint-plugin": "^5.59.0",
     "@typescript-eslint/parser": "^5.59.0",
     "eslint": "^8.38.0",
-    "jest": "^29.5.0",
+    "jest": "^29.7.0",
     "ts-jest": "^29.1.0",
     "typedoc": "^0.24.7",
     "typescript": "^5.0.4"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/html-es.git"
+    "url": "git+https://github.com/jorgoose/es-html.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/html-es/issues"
+    "url": "https://github.com/jorgoose/es-html/issues"
   },
-  "homepage": "https://github.com/yourusername/html-es#readme"
+  "homepage": "https://github.com/jorgoose/es-html#readme",
+  "directories": {
+    "test": "tests"
+  }
 }

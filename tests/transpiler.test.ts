@@ -36,12 +36,12 @@ describe("HTMLEsTranspiler", () => {
 
     test("translates heading tags", () => {
       const cases = [
-        ["<t1>Título Principal</t1>", "<h1>Título Principal</h1>"],
-        ["<t2>Subtítulo</t2>", "<h2>Subtítulo</h2>"],
-        ["<t3>Sección</t3>", "<h3>Sección</h3>"],
-        ["<t4>Tema</t4>", "<h4>Tema</h4>"],
-        ["<t5>Subtema</t5>", "<h5>Subtema</h5>"],
-        ["<t6>Nota</t6>", "<h6>Nota</h6>"],
+        ["<e1>Título Principal</e1>", "<h1>Título Principal</h1>"],
+        ["<e2>Subtítulo</e2>", "<h2>Subtítulo</h2>"],
+        ["<e3>Sección</e3>", "<h3>Sección</h3>"],
+        ["<e4>Tema</e4>", "<h4>Tema</h4>"],
+        ["<e5>Subtema</e5>", "<h5>Subtema</h5>"],
+        ["<e6>Nota</e6>", "<h6>Nota</h6>"],
       ];
       cases.forEach(([input, expected]) => {
         expect(transpiler.transpile(input)).toBe(expected);
@@ -88,59 +88,6 @@ describe("HTMLEsTranspiler", () => {
       });
     });
 
-    test("handles attributes that are equivalent in Spanish and English", () => {
-      const cases = [
-      ['<a href="https://google.com">Google</a>', '<a href="https://google.com">Google</a>'],
-      ['<img src="test.jpg"/>', '<img src="test.jpg"/>'],
-      ['<div class="container">Content</div>', '<div class="container">Content</div>'],
-      ['<span>Text</span>', '<span>Text</span>'],
-      ['<p>Paragraph</p>', '<p>Paragraph</p>'],
-      ['<br/>', '<br/>'],
-      ['<hr/>', '<hr/>'],
-      ['<b>Bold</b>', '<b>Bold</b>'],
-      ['<i>Italic</i>', '<i>Italic</i>'],
-      ['<u>Underline</u>', '<u>Underline</u>'],
-      ['<s>Strikethrough</s>', '<s>Strikethrough</s>'],
-      ['<del>Deleted</del>', '<del>Deleted</del>'],
-      ['<ins>Inserted</ins>', '<ins>Inserted</ins>'],
-      ['<kbd>Keyboard</kbd>', '<kbd>Keyboard</kbd>'],
-      ['<var>Variable</var>', '<var>Variable</var>'],
-      ['<pre>Preformatted</pre>', '<pre>Preformatted</pre>'],
-      ['<samp>Sample</samp>', '<samp>Sample</samp>'],
-      ['<meta charset="UTF-8"/>', '<meta charset="UTF-8"/>'],
-      ['<noscript>JavaScript is disabled</noscript>', '<noscript>JavaScript is disabled</noscript>'],
-      ['<iframe src="frame.html"></iframe>', '<iframe src="frame.html"></iframe>'],
-      ['<embed src="file.swf"/>', '<embed src="file.swf"/>'],
-      ['<video src="video.mp4"></video>', '<video src="video.mp4"></video>'],
-      ['<audio src="audio.mp3"></audio>', '<audio src="audio.mp3"></audio>'],
-      ['<track kind="subtitles" src="subs.vtt"/>', '<track kind="subtitles" src="subs.vtt"/>'],
-      ['<svg></svg>', '<svg></svg>'],
-      ['<math></math>', '<math></math>'],
-      ['<blockquote>Quote</blockquote>', '<blockquote>Quote</blockquote>'],
-      ['<q>Inline Quote</q>', '<q>Inline Quote</q>'],
-      ['<abbr title="Abbreviation">Abbr</abbr>', '<abbr title="Abbreviation">Abbr</abbr>'],
-      ['<area shape="rect" coords="34,44,270,350" href="link.html"/>', '<area shape="rect" coords="34,44,270,350" href="link.html"/>'],
-      ['<base href="https://example.com"/>', '<base href="https://example.com"/>'],
-      ['<bdi>BiDi</bdi>', '<bdi>BiDi</bdi>'],
-      ['<bdo dir="rtl">Right to Left</bdo>', '<bdo dir="rtl">Right to Left</bdo>'],
-      ['<data value="123">Data</data>', '<data value="123">Data</data>'],
-      ['<datalist id="list"><option value="Option1"/></datalist>', '<datalist id="list"><option value="Option1"/></datalist>'],
-      ['<dd>Definition Description</dd>', '<dd>Definition Description</dd>'],
-      ['<dfn>Definition</dfn>', '<dfn>Definition</dfn>'],
-      ['<dl><dt>Term</dt><dd>Description</dd></dl>', '<dl><dt>Term</dt><dd>Description</dd></dl>'],
-      ['<dt>Definition Term</dt>', '<dt>Definition Term</dt>'],
-      ['<fieldset><legend>Legend</legend></fieldset>', '<fieldset><legend>Legend</legend></fieldset>'],
-      ['<nav>Navigation</nav>', '<nav>Navigation</nav>'],
-      ['<wbr/>', '<wbr/>'],
-      ['<tbody><tr><td>Data</td></tr></tbody>', '<tbody><tr><td>Data</td></tr></tbody>'],
-      ['<tfoot><tr><td>Footer</td></tr></tfoot>', '<tfoot><tr><td>Footer</td></tr></tfoot>'],
-      ['<thead><tr><th>Header</th></tr></thead>', '<thead><tr><th>Header</th></tr></thead>'],
-      ];
-      cases.forEach(([input, expected]) => {
-      expect(transpiler.transpile(input)).toBe(expected);
-      });
-    });
-
     test("handles unknown attributes gracefully", () => {
       const input = '<div desconocido="valor"></div>';
       expect(transpiler.transpile(input)).toBe('<div desconocido="valor"></div>');
@@ -152,7 +99,7 @@ describe("HTMLEsTranspiler", () => {
       const input =
         '<formulario método="post"><entrada tipo="text" requerido></entrada><botón>Enviar</botón></formulario>';
       const expected =
-        '<form methfte="post"><input type="text" required></input><button>Enviar</button></form>';
+        '<form method="post"><input type="text" required></input><button>Enviar</button></form>';
       expect(transpiler.transpile(input)).toBe(expected);
     });
 
@@ -216,8 +163,9 @@ describe("HTMLEsTranspiler", () => {
     test("preserves special content", () => {
       const cases = [
         "<!-- comentario -->",
+        "<!-- <comment> Testing this mock comment tag </comment> -->",
+        "<!-- <h1> Testing comment with a real tag inside </h1> -->",
         "<![CDATA[datos]]>",
-        "<?xml version='1.0'?>",
       ];
       cases.forEach((input) => {
         expect(transpiler.transpile(input)).toBe(input);

@@ -78,7 +78,7 @@ describe('HTMLEsValidator', () => {
         test('allows data and aria attributes', () => {
             const cases = [
                 '<div data-test="value">test</div>',
-                '<button aria-label="test">test</button>',
+                '<botón aria-label="test">test</botón>',
                 '<div data-custom-attr="test"></div>'
             ];
             cases.forEach(input => {

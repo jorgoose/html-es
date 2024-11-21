@@ -14,9 +14,10 @@ export class ValidationError extends Error {
 
 export class HTMLEsValidator {
     private voidElements = new Set([
-        'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input',
-        'link', 'meta', 'param', 'source', 'track', 'wbr', 'command',
-        'keygen', 'menuitem'
+        'área', 'base', 'salto', 'columna', 'incrustar', 
+        'hr', 'imagen', 'entrada', 'enlace', 'meta',
+        'parámetro', 'fuente', 'pista', 'wbr', 'comando',
+        'genclave', 'elementomenú', "img", 
     ]);
 
     validateSource(source: string): ValidationError[] {
@@ -177,19 +178,6 @@ export class HTMLEsValidator {
 
     private isValidSpanishTag(tag: string): boolean {
         const normalizedTag = tag.toLowerCase().trim();
-        return normalizedTag in tagMappings || this.isUnchangedTag(normalizedTag);
-    }
-
-    private isUnchangedTag(tag: string): boolean {
-        const unchangedTags = new Set([
-            'a', 'img', 'div', 'span', 'p', 'br', 'hr', 'b', 'i', 'u', 's', 'del',
-            'ins', 'kbd', 'var', 'pre', 'samp', 'meta', 'script', 'noscript', 'style',
-            'iframe', 'embed', 'video', 'audio', 'source', 'track', 'canvas', 'svg',
-            'math', 'blockquote', 'q', 'abbr', 'area', 'base', 'bdi', 'bdo', 'button',
-            'data', 'datalist', 'dd', 'dfn', 'dl', 'dt', 'fieldset', 'form', 'h1',
-            'h2', 'h3', 'h4', 'h5', 'h6', 'label', 'menu', 'picture', 'small', 'table',
-            'tbody', 'tfoot', 'thead', 'wbr', 'nav'
-        ]);
-        return unchangedTags.has(tag.toLowerCase());
+        return normalizedTag in tagMappings;
     }
 }

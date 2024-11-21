@@ -50,12 +50,12 @@ export const tagMappings: Record<string, string> = {
     'fuente': 'source',
 
     // Heading tags mapped to t1 - t6
-    't1': 'h1',
-    't2': 'h2',
-    't3': 'h3',
-    't4': 'h4',
-    't5': 'h5',
-    't6': 'h6',
+    'e1': 'h1',
+    'e2': 'h2',
+    'e3': 'h3',
+    'e4': 'h4',
+    'e5': 'h5',
+    'e6': 'h6',
 
     // Abbreviations adapted to Spanish (for tags that are abbreviations in English)
     'el': 'li',      // 'elemento de lista' -> 'li' (list item)
@@ -64,10 +64,50 @@ export const tagMappings: Record<string, string> = {
     'ct': 'td',      // 'celda de tabla' -> 'td' (table data)
     'et': 'th',      // 'encabezado de tabla' -> 'th' (table header)
     'ft': 'tr',      // 'fila de tabla' -> 'tr' (table row)
-};
 
-// Tags that remain unchanged in Spanish (common HTML tags):
-// a, img, div, span, p, br, hr, b, i, u, s, del, ins, kbd, var, pre, samp,
-// meta, noscript, iframe, embed, video, audio, track, svg, math,
-// blockquote, q, abbr, area, base, bdi, bdo, data, datalist, dd, dfn, dl,
-// dt, fieldset, nav, wbr, tbody, tfoot, thead
+    // Tags that remain unchanged in Spanish (common HTML tags):
+    'a': 'a',
+    'img': 'img',
+    'div': 'div',
+    'span': 'span',
+    'p': 'p',
+    'br': 'br',
+    'hr': 'hr',
+    'b': 'b',
+    'i': 'i',
+    'u': 'u',
+    's': 's',
+    'del': 'del',
+    'ins': 'ins',
+    'kbd': 'kbd',
+    'var': 'var',
+    'pre': 'pre',
+    'samp': 'samp',
+    'meta': 'meta',
+    'noscript': 'noscript',
+    'iframe': 'iframe',
+    'embed': 'embed',
+    'video': 'video',
+    'audio': 'audio',
+    'track': 'track',
+    'svg': 'svg',
+    'math': 'math',
+    'blockquote': 'blockquote',
+    'q': 'q',
+    'abbr': 'abbr',
+    'area': 'area',
+    'base': 'base',
+    'bdi': 'bdi',
+    'bdo': 'bdo',
+    'datalist': 'datalist',
+    'dd': 'dd',
+    'dfn': 'dfn',
+    'dl': 'dl',
+    'dt': 'dt',
+    'fieldset': 'fieldset',
+    'nav': 'nav',
+    'wbr': 'wbr',
+    'tbody': 'tbody',
+    'tfoot': 'tfoot',
+    'thead': 'thead'
+};

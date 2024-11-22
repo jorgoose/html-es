@@ -1,6 +1,6 @@
 # EsHTML (Work in Progress)
 
-A transpiler that converts Spanish-based HTML (EsHTML) to standard HTML - designed for Spanish-speaking developers learning web development.
+A transpiler that converts EsHTML (a variant of HTML with first-class support for Spanish tags and attributes) to standard HTML - designed for Spanish speakers to learn web development without the added barrier of English terminology.
 
 > ⚠️ **Note**: This project is currently under active development. Features and documentation may change.
 

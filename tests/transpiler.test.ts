@@ -81,7 +81,7 @@ describe("EsHTMLTranspiler", () => {
       ['<ct ec="2"></ct>', '<td colspan="2"></td>'],
       ['<ct ef="3"></ct>', '<td rowspan="3"></td>'],
       ['<a rd="stylesheet"></a>', '<a rel="stylesheet"></a>'],
-      ['<html idio="es"></html>', '<html lang="es"></html>'],
+      ['<eshtml idio="es"></eshtml>', '<html lang="es"></html>'],
       ];
       cases.forEach(([input, expected]) => {
       expect(transpiler.transpile(input)).toBe(expected);

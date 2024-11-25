@@ -1,5 +1,6 @@
 export const tagMappings: Record<string, string> = {
     // Full English words translated to Spanish (with accent marks)
+    'eshtml': 'html',
     'título': 'title',
     'cuerpo': 'body',
     'cabecera': 'head',          // 'head' is better translated as 'cabecera' in HTML context

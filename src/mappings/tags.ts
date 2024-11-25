@@ -33,7 +33,7 @@ export const tagMappings: Record<string, string> = {
     'pequeño': 'small',
     'menú': 'menu',
     'seleccionar': 'select',
-    'grupoopciones': 'optgroup',
+    'grupoopc': 'optgroup',
     'opción': 'option',
     'tabla': 'table',
     'subtítulo': 'caption',

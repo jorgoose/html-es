@@ -49,6 +49,15 @@ export const tagMappings: Record<string, string> = {
     'plantilla': 'template',
     'leyenda': 'legend',
     'fuente': 'source',
+    'principal': 'main',
+    'én': 'em',
+    'fuerte': 'strong',
+    'sub': 'sub',
+    'sup': 'sup',
+    'rubí': 'ruby',
+    'tr': 'rt',
+    'pr': 'rp',
+
 
     // Heading tags mapped to t1 - t6
     'e1': 'h1',

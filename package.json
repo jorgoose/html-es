@@ -1,6 +1,6 @@
 {
   "name": "html-es",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Write HTML using pure Spanish - A transpiler for EsHTML for Spanish-speaking learners",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

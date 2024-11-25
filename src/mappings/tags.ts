@@ -59,6 +59,8 @@ export const tagMappings: Record<string, string> = {
     'rubí': 'ruby',
     'tr': 'rt',
     'pr': 'rp',
+    'empotrar': 'embed',
+    'marcol': 'iframe',
 
 
     // Heading tags mapped to t1 - t6
@@ -101,8 +103,6 @@ export const tagMappings: Record<string, string> = {
     'samp': 'samp',
     'meta': 'meta',
     'noscript': 'noscript',
-    'iframe': 'iframe',
-    'empotrar': 'embed',
     'video': 'video',
     'audio': 'audio',
     'track': 'track',

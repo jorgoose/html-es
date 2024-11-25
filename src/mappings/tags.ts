@@ -16,7 +16,7 @@ export const tagMappings: Record<string, string> = {
     'figura': 'figure',
     'piefigura': 'figcaption',
     'encabezado': 'header',
-    'grupoencabezado': 'hgroup',
+    'grupoe': 'hgroup',
     'mapa': 'map',
     'marca': 'mark',
     'medidor': 'meter',

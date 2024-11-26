@@ -55,12 +55,12 @@ export const tagMappings: Record<string, string> = {
     'én': 'em',
     'fuerte': 'strong',
     'sub': 'sub',
-    'sup': 'sup',
     'rubí': 'ruby',
     'tr': 'rt',
     'pr': 'rp',
     'empotrar': 'embed',
     'marcol': 'iframe',
+    'c': 'q',
 
 
     // Heading tags mapped to t1 - t6

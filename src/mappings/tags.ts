@@ -55,6 +55,8 @@ export const tagMappings: Record<string, string> = {
     'én': 'em',
     'fuerte': 'strong',
     'sub': 'sub',
+    'sup': 'sup',
+    'ranura': 'slot',
     'rubí': 'ruby',
     'tr': 'rt',
     'pr': 'rp',

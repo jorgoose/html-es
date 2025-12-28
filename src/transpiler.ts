@@ -1,6 +1,6 @@
 import { EsHTMLValidator } from './validator';
 import { tagMappings } from './mappings/tags';
-import { attributeMappings } from './mappings/attributes';
+import { attributeMappings, attributeValueMappings } from './mappings/attributes';
 
 export interface TranspileOptions {
     strictMode?: boolean;  // If true, throw on any validation errors
@@ -63,6 +63,23 @@ export class EsHTMLTranspiler {
             result = result.replace(
                 new RegExp(`(?<=\\s)${spanish}(?=(\\s|=|>|"))`, 'g'),
                 english
+            );
+        });
+
+        // Process attribute values
+        const sortedAttrValues = Object.entries(attributeValueMappings)
+            .sort(([a], [b]) => b.length - a.length);
+
+        sortedAttrValues.forEach(([spanish, english]) => {
+            // Match attribute values in double quotes
+            result = result.replace(
+                new RegExp(`="\\s*${spanish}\\s*"`, 'gi'),
+                `="${english}"`
+            );
+            // Match attribute values in single quotes
+            result = result.replace(
+                new RegExp(`='\\s*${spanish}\\s*'`, 'gi'),
+                `='${english}'`
             );
         });
 

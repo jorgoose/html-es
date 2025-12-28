@@ -13,11 +13,20 @@ export class ValidationError extends Error {
 }
 
 export class EsHTMLValidator {
+    // Void elements (self-closing) - must match actual tag mappings
     private voidElements = new Set([
-        'área', 'base', 'salto', 'columna', 'incrustar', 
-        'hr', 'imagen', 'entrada', 'enlace', 'meta',
-        'parámetro', 'fuente', 'pista', 'wbr', 'comando',
-        'genclave', 'elementomenú', 'img', 'br', 'entrada',
+        // Spanish mapped void elements
+        'área',        // area
+        'entrada',     // input
+        'columna',     // col
+        'enlace',      // link
+        'parámetro',   // param
+        'fuente',      // source
+        'empotrar',    // embed
+
+        // English void elements (unchanged in mappings)
+        'area', 'base', 'br', 'col', 'embed', 'hr', 'img',
+        'input', 'link', 'meta', 'param', 'source', 'track', 'wbr',
     ]);
 
     validateSource(source: string): ValidationError[] {
